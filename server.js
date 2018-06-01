@@ -44,6 +44,6 @@ app.get('/allevents', (req, res) => {All.Allevents(req, res, db)})
 
 // app.put('/image', (req, res) => {image.imageHandler(req, res, db)})
 
-app.listen(3001, () => {
-	console.log('App is running on port 3001');
+app.listen(process.env.PORT || 3001, () => {
+	console.log(`App is running on port ${process.env.PORT}`);
 })
